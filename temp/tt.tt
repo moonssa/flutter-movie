@@ -1,0 +1,117 @@
+import 'package:flutter/material.dart';
+import 'package:webtoon/widgets/button.dart';
+
+void main() {
+  runApp(const App());
+}
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: const Color(0xFF181818),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 220,
+              ),
+              Text(
+                'MONDAY 16',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white.withOpacity(0.8),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "TODAY",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 44,
+                    ),
+                  ),
+                  Text(
+                    "🔴",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 10,
+                    ),
+                  ),
+                  Text(
+                    "17 18 19",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 44,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  color: Colors.yellow,
+                ),
+                child: const Column(
+                  children: [
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text("12"),
+                            Text("12"),
+                            Text("|"),
+                            Text("12"),
+                            Text("12"),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text("DESIGN"),
+                            Text("MEETING"),
+                          ],
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text("ALEX"),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text("HELENA"),
+                          ],
+                        ),
+                        Column(
+                          children: [Text("NANA")],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
